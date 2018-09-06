@@ -37,7 +37,7 @@ function getRandomInt() {
   return Math.floor(Math.random() * (100 - 0)) + 0;
 }
 function getRandomColor(ctx) {
-  ctx.fillStyle = 'hsl(240, ' + getRandomInt() + '% ' + ',50%)'
+  ctx.fillStyle = 'hsl(240, ' + getRandomInt() + '% ' + ',50%)';
 }
 
 var renderBar = function (ctx, names, x, y, x1, y1, width, height, times, max) {
