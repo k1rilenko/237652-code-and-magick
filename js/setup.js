@@ -44,14 +44,14 @@ var setupUserName = gameSetup.querySelector('.setup-user-name');
 
 var popupEscPressHandler = function (evt) {
   if (evt.keyCode === KEY_ESC) {
-    closePopup;
+    closePopup();
   }
 };
 
 var openPopup = function () {
   gameSetup.classList.remove('hidden');
   document.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === KEY_ESC) {
+    if (evt.keyCode === KEY_ESC && document.activeElement !== setupUserName) {
       gameSetup.classList.add('hidden');
     }
   });
