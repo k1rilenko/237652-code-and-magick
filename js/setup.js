@@ -52,12 +52,12 @@ var openPopup = function () {
   gameSetup.classList.remove('hidden');
   document.addEventListener('keydown', function (evt) {
     if (evt.keyCode === KEY_ESC && document.activeElement !== setupUserName) {
-      gameSetup.classList.add('hidden');
+      closePopup();
     }
   });
 };
 
-var closePopup = function () {
+var closePopup = function (evt) {
   gameSetup.classList.add('hidden');
   document.removeEventListener('keydown', popupEscPressHandler);
 };
